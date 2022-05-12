@@ -2,15 +2,18 @@ import "./App.css";
 import React, { useState } from "react";
 function App() {
   let [attempt, setAttempt] = useState(6);
-  let rand = Math.floor(Math.random() * 100) + 1;
-  let [answer, setAnswer] = useState(0);
   let [once, setOnce] = useState(1);
+
+  let [answer, setAnswer] = useState(Math.floor(Math.random() * 100) + 1);
   let [number, setNumber] = useState(0);
   const [toggle, setToggle] = useState(false);
   const [toggle2, setToggle2] = useState(false);
   const [toggle3, setToggle3] = useState(true);
   const [toggle4, setToggle4] = useState(false);
-
+  if (once === 1) {
+    setAnswer(Math.floor(Math.random() * 100) + 1);
+    setOnce(0);
+  }
   return (
     <div className="App">
       <style>
@@ -33,20 +36,16 @@ function App() {
                 placeholder="1-100"
                 type="text"
                 id="guesser"
+                pattern="[1-100]*"
               />
             </label>
             (
             <button
               onClick={() => {
-                if (once === 1) {
-                  setAnswer(rand);
-                  setOnce(0);
-                }
                 console.log(answer);
                 console.log(number);
                 setToggle(true);
                 if (number == answer) {
-                  console.log("yes");
                   setToggle(false);
                   setToggle2(true);
                   setToggle3(false);
