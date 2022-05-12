@@ -40,6 +40,17 @@ h1{
   transition-duration: 0.4s;
   border-radius: 100px;
 }
+#surrender{
+  color: rgb(50, 47, 47);
+ background-color: antiquewhite;
+ border: none;
+ width: 11%;
+ font-family: 'PF Arma Five', sans-serif;
+  font-size: 25px;
+  transition-duration: 0.4s;
+  border-radius: 100px;
+  margin-left: 10px;
+}
 #replay:hover{
     background-color: #2FE6DE; 
     color: white;

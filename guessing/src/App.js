@@ -3,13 +3,16 @@ import React, { useState } from "react";
 function App() {
   let [attempt, setAttempt] = useState(6);
   let [once, setOnce] = useState(1);
-
   let [answer, setAnswer] = useState(Math.floor(Math.random() * 100) + 1);
-  let [number, setNumber] = useState(0);
+  let [number, setNumber] = useState();
   const [toggle, setToggle] = useState(false);
   const [toggle2, setToggle2] = useState(false);
   const [toggle3, setToggle3] = useState(true);
   const [toggle4, setToggle4] = useState(false);
+  const [toggle5, setToggle5] = useState(false);
+  const [toggle6, setToggle6] = useState(false);
+  const [toggle7, setToggle7] = useState(false);
+
   if (once === 1) {
     setAnswer(Math.floor(Math.random() * 100) + 1);
     setOnce(0);
@@ -62,9 +65,20 @@ function App() {
               type="button"
               id="match"
             >
-              Match
+              Guess
             </button>
-            ){toggle ? <h2>You have only {attempt} attempts left</h2> : null}
+            <button
+              onClick={() => {
+                setToggle4(true);
+                setToggle3(false);
+              }}
+              type="button"
+              id="surrender"
+            >
+              Surrender
+            </button>
+            ){toggle5 ? <h2>You are far </h2> : null}
+            {toggle ? <h2>You have only {attempt} attempts left</h2> : null}
           </form>
           )
         </div>
