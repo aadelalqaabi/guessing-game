@@ -13,8 +13,6 @@ h1{
   text-shadow: 1px 2px #ffffff;
 }
 
-
-
 #match{
   color: rgb(50, 47, 47);
  background-color: antiquewhite;
@@ -24,6 +22,7 @@ h1{
   font-size: 25px;
   transition-duration: 0.4s;
   border-radius: 100px;
+  padding-bottom: 8px;
 }
 #match:hover{
     background-color: #2FE6DE; 
@@ -39,6 +38,8 @@ h1{
   font-size: 25px;
   transition-duration: 0.4s;
   border-radius: 100px;
+  padding: 20px;
+  
 }
 #surrender{
   color: rgb(50, 47, 47);
@@ -46,10 +47,11 @@ h1{
  border: none;
  width: 11%;
  font-family: 'PF Arma Five', sans-serif;
-  font-size: 25px;
+  font-size: 23px;
   transition-duration: 0.4s;
   border-radius: 100px;
   margin-left: 10px;
+  padding-bottom: 8px;
 }
 #replay:hover{
     background-color: #2FE6DE; 
@@ -60,7 +62,26 @@ label{
   font-family: 'PF Arma Five', sans-serif;
   font-size: 30px;
 }
-
+#winnertext{
+  
+  
+}
+#lost{
+  padding: 180px;
+  background-image: url("https://vintagecoats.files.wordpress.com/2015/01/the-door-into-summer-natsu-e-no-tobira-marion-eyes-closed-side-portrait-shot-sepia-tones.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#won{
+ padding: 180px;
+  background-image: url("https://cdn.dribbble.com/users/282274/screenshots/2426092/neon_lasers_and_lights_vj_pack.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+img{
+  opacity: 10%;
+}
 input{
   color: #E6D5DC ;
   font-size: 30px;
@@ -85,9 +106,12 @@ h3{
   color: #C7C2F5;
   font-family: 'PF Arma Five', sans-serif;
   font-size: 40px;
-  text-shadow: 1px 2px #ffffff;
+  text-shadow: 5px 4px #000000;
   margin-top: 22%;
   padding-top: 0%;
+  margin-top: 150px;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
 }
 
 .App {

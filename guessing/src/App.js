@@ -10,8 +10,6 @@ function App() {
   const [toggle3, setToggle3] = useState(true);
   const [toggle4, setToggle4] = useState(false);
   const [toggle5, setToggle5] = useState(false);
-  const [toggle6, setToggle6] = useState(false);
-  const [toggle7, setToggle7] = useState(false);
 
   if (once === 1) {
     setAnswer(Math.floor(Math.random() * 100) + 1);
@@ -46,7 +44,6 @@ function App() {
             <button
               onClick={() => {
                 console.log(answer);
-                console.log(number);
                 setToggle(true);
                 if (number == answer) {
                   setToggle(false);
@@ -77,16 +74,15 @@ function App() {
             >
               Surrender
             </button>
-            ){toggle5 ? <h2>You are far </h2> : null}
-            {toggle ? <h2>You have only {attempt} attempts left</h2> : null}
+            ){toggle ? <h2>You have only {attempt} attempts left</h2> : null}
           </form>
           )
         </div>
       ) : null}
 
       {toggle2 ? (
-        <div>
-          <h3>You WIN the number is {answer}</h3>
+        <div id="won">
+          <h3 id="winnertext">You WIN the number is {answer}</h3>
           <button
             onClick={() => window.location.reload()}
             type="button"
@@ -97,7 +93,7 @@ function App() {
         </div>
       ) : null}
       {toggle4 ? (
-        <div>
+        <div id="lost">
           <h3>
             You LOSE the number is {answer} and your input was {number}
           </h3>
